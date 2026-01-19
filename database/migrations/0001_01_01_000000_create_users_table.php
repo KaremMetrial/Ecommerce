@@ -24,9 +24,8 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreignId('city_id')->constrained()->cascadeOnDelete();
 
-            $table->index(['city_id','email','phone','is_active']);
+            $table->index(['email','phone','is_active']);
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

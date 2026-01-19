@@ -16,7 +16,10 @@ return new class extends Migration {
             $table->foreignId('option_value_id')->constrained()->cascadeOnDelete();
             $table->foreignId('option_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
-            $table->unique(['cart_item_id', 'option_value_id', 'option_id']);
+            $table->unique(
+                ['cart_item_id', 'option_value_id', 'option_id'],
+                'cart_item_option_unique'
+            );
         });
     }
 

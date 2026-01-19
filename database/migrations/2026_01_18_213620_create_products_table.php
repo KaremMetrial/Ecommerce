@@ -38,7 +38,10 @@ return new class extends Migration
             $table->foreignId('currency_id')->constrained()->cascadeOnDelete();
 
             $table->unique(['sku']);
-            $table->index(['is_active', 'available_for', 'category_id', 'brand_id', 'currency_id']);
+            $table->index(
+                ['is_active', 'available_for', 'category_id', 'brand_id', 'currency_id'],
+                'products_filter_idx'
+            );
         });
         Schema::create('product_translations', function (Blueprint $table) {
             $table->id();

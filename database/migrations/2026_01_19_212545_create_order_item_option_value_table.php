@@ -22,7 +22,10 @@ return new class extends Migration
             $table->foreignId('option_id')->constrained()->cascadeOnDelete();
             $table->foreignId('option_value_id')->constrained()->cascadeOnDelete();
 
-            $table->unique(['order_item_id', 'option_id', 'option_value_id']);
+            $table->unique(
+                ['order_item_id', 'option_id', 'option_value_id'],
+                'order_item_option_unique'
+            );
         });
     }
 

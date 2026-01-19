@@ -24,7 +24,7 @@ return new class extends Migration
             $table->json('address_data')->nullable();
 
             $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
-            $table->foreignId('address_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('address_user_id')->nullable()->constrained()->nullOnDelete();
             $table->foreignId('city_id')->nullable()->constrained()->nullOnDelete();
             $table->timestamps();
         });

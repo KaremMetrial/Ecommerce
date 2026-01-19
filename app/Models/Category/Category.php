@@ -2,11 +2,13 @@
 
 namespace App\Models\Category;
 
+use App\Models\Option\Option;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -36,5 +38,10 @@ class Category extends Model implements TranslatableContract
     public function children(): HasMany
     {
         return $this->hasMany(Category::class, 'parent_id');
+    }
+    // ========= Belongs To Many ========
+    public function options(): BelongsToMany
+    {
+        return $this->belongsToMany(Option::class, 'category_option');
     }
 }

@@ -1,0 +1,17 @@
+{
+    "Fixed": "ثابت",
+    "Percentage": "نسبة",
+    "File": "ملف",
+    "String": "نص",
+    "Integer": "عدد صحيح",
+    "Boolean": "منطقى",
+    "Date": "تاريخ",
+    "Time": "وقت",
+    "Datetime": "تاريخ ووقت",
+    "Pending": "قيد الانتظار",
+    "Confirmed": "تم التأكيد",
+    "Completed": "تمت",
+    "Delivered": "تم التوصيل",
+    "Cancelled": "ملغي",
+    "Failed": "فشل"
+}

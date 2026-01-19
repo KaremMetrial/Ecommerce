@@ -8,4 +8,5 @@ class BrandTranslation extends Model
 {
     use SoftDeletes;
     public $timestamps = false;
+
 }

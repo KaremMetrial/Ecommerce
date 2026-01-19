@@ -4,7 +4,7 @@ namespace App\Models\City;
 
 use App\Models\Country\Country;
 use App\Models\Governorate\Governorate;
-use App\Models\User;
+use App\Models\User\User;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Attributes\Scope;

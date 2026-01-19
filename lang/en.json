@@ -1,0 +1,17 @@
+{
+    "Fixed": "Fixed",
+    "Percentage": "Percentage",
+    "File": "File",
+    "String": "String",
+    "Integer": "Integer",
+    "Boolean": "Boolean",
+    "Date": "Date",
+    "Time": "Time",
+    "Datetime": "Datetime",
+    "Pending": "Pending",
+    "Confirmed": "Confirmed",
+    "Completed": "Completed",
+    "Delivered": "Delivered",
+    "Cancelled": "Cancelled",
+    "Failed": "Failed"
+}

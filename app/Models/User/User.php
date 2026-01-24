@@ -38,27 +38,32 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     // Scopes
     #[Scope]
     protected function active($query)
     {
         $query->whereIsActive(true);
     }
+
     #[Scope]
     protected function inactive($query)
     {
         $query->whereIsActive(false);
     }
+
     #[Scope]
     protected function phone($query, $phone)
     {
         $query->wherePhone($phone);
     }
+
     #[Scope]
     protected function email($query, $email)
     {
         $query->whereEmail($email);
     }
+
     // Relations
     // ========= Belongs To ========
     public function city(): BelongsTo

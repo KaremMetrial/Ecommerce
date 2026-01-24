@@ -16,11 +16,13 @@ class ProductVariant extends Model
     {
         return $this->belongsTo(Product::class);
     }
+
     // ========= Belongs To Many ========
     public function options(): BelongsToMany
     {
         return $this->belongsToMany(Option::class, 'variant_option_value');
     }
+
     public function optionValues(): BelongsToMany
     {
         return $this->belongsToMany(OptionValue::class, 'variant_option_value');

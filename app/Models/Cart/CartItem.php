@@ -18,19 +18,23 @@ class CartItem extends Model
     {
         return $this->belongsTo(Cart::class);
     }
+
     public function productVariant(): BelongsTo
     {
         return $this->belongsTo(ProductVariant::class);
     }
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }
+
     // ========= Belongs To Many ========
     public function optionValues(): BelongsToMany
     {
         return $this->belongsToMany(OptionValue::class, 'cart_item_option_value');
     }
+
     public function options(): BelongsToMany
     {
         return $this->belongsToMany(Option::class, 'cart_item_option_value');

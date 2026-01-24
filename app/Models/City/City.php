@@ -19,7 +19,9 @@ class City extends Model implements TranslatableContract
     use SoftDeletes, Translatable;
 
     public $translatedAttributes = ['name'];
+
     protected $with = ['translations'];
+
     // Scopes
     #[Scope]
     protected function active($query)

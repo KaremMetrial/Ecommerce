@@ -11,12 +11,14 @@ class AddressUser extends Model
     protected $casts = [
         'user_data' => 'array',
     ];
-    //================== Relationships =========================
+
+    // ================== Relationships =========================
     // ========= Belongs To ========
     public function city(): BelongsTo
     {
         return $this->belongsTo(City::class);
     }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

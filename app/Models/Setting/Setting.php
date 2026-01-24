@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     protected $appends = ['value'];
+
     protected $casts = [
-      'type' => DataTypeEnum::class,
+        'type' => DataTypeEnum::class,
     ];
 
     public function getValueAttribute($value)
@@ -17,6 +18,7 @@ class Setting extends Model
         if ($this->type === DataTypeEnum::FILE) {
             return asset($value);
         }
+
         return $value;
     }
 }

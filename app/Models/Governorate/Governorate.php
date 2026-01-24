@@ -17,6 +17,7 @@ class Governorate extends Model implements TranslatableContract
     use SoftDeletes, Translatable;
 
     public $translatedAttributes = ['name'];
+
     protected $with = ['translations'];
 
     // Scopes
@@ -31,12 +32,14 @@ class Governorate extends Model implements TranslatableContract
     {
         $query->whereIsActive(false);
     }
+
     // Relations
     // ========= Belongs To ========
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
     }
+
     // ========= Has Many ========
     public function cities(): HasMany
     {

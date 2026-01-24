@@ -10,13 +10,17 @@ use Illuminate\Database\Eloquent\Model;
 class Flag extends Model implements TranslatableContract
 {
     use Translatable;
+
     public $translatedAttributes = ['question', 'answer'];
+
     protected $with = ['translations'];
+
     #[Scope]
     protected function active($query)
     {
         $query->whereIsActive(true);
     }
+
     #[Scope]
     protected function inactive($query)
     {

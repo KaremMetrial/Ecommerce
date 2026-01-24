@@ -18,12 +18,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Product extends Model implements TranslatableContract, HasMedia
+class Product extends Model implements HasMedia, TranslatableContract
 {
-    use SoftDeletes, Translatable, InteractsWithMedia;
+    use InteractsWithMedia, SoftDeletes, Translatable;
 
     public $translatedAttributes = ['name'];
+
     protected $with = ['translations'];
+
     protected $casts = [
         'is_active' => 'boolean',
         'is_auto_manage_stock' => 'boolean',
@@ -91,6 +93,7 @@ class Product extends Model implements TranslatableContract, HasMedia
     {
         $query->whereIsAvailableInStock(false);
     }
+
     // ================== Relationships =========================
     // ========= Belongs To ========
     public function category(): BelongsTo
@@ -107,17 +110,20 @@ class Product extends Model implements TranslatableContract, HasMedia
     {
         return $this->belongsTo(Currency::class);
     }
+
     // ================== Belongs To Many =========================
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tags::class);
     }
+
     // ================== Has Many =========================
     public function sliders(): HasMany
     {
         return $this->hasMany(Slider::class);
     }
-    //================== Media =========================
+
+    // ================== Media =========================
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('images')

@@ -14,26 +14,31 @@ class Coupon extends Model
         'is_active' => 'boolean',
         'discount_type' => DiscountTypeEnum::class,
     ];
+
     #[Scope]
     protected function active($query)
     {
         $query->whereIsActive(true);
     }
+
     #[Scope]
     protected function inactive($query)
     {
         $query->whereIsActive(false);
     }
+
     #[Scope]
     protected function code($query, $code)
     {
         $query->whereCode($code);
     }
+
     #[Scope]
     protected function discountType($query, $discountType)
     {
         $query->whereDiscountType($discountType);
     }
+
     // Relations
     // ========= Belongs To ========
     public function product(): BelongsTo

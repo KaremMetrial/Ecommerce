@@ -13,16 +13,19 @@ class Currency extends Model
     {
         $query->whereIsActive(true);
     }
+
     #[Scope]
     protected function inactive($query)
     {
         $query->whereIsActive(false);
     }
+
     #[Scope]
     protected function code($query, $code)
     {
         $query->whereCode($code);
     }
+
     #[Scope]
     protected function default($query)
     {

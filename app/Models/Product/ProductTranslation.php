@@ -9,5 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ProductTranslation extends Model
 {
     use SoftDeletes, Translatable;
+
     public $timestamps = false;
 }

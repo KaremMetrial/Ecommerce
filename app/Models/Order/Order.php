@@ -19,7 +19,8 @@ class Order extends Model
         'user_data' => 'array',
         'address_data' => 'array',
     ];
-    //================== Relationships =========================
+
+    // ================== Relationships =========================
     // ========= Belongs To ========
     public function user(): BelongsTo
     {
@@ -35,11 +36,13 @@ class Order extends Model
     {
         return $this->belongsTo(City::class);
     }
+
     // ================== Has Many =========================
     public function items(): HasMany
     {
         return $this->hasMany(OrderItem::class);
     }
+
     // ================== Has One =========================
     public function transaction(): HasOne
     {

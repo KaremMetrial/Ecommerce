@@ -10,10 +10,13 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model implements TranslatableContract
 {
     use Translatable;
+
     public $translatedAttributes = ['title', 'description'];
+
     protected $casts = [
         'is_active' => 'boolean',
     ];
+
     #[Scope]
     protected function active($query)
     {

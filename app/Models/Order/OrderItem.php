@@ -31,6 +31,7 @@ class OrderItem extends Model
     {
         return $this->belongsTo(ProductVariant::class);
     }
+
     // ========= Belongs To Many ========
     public function optionValues(): BelongsToMany
     {

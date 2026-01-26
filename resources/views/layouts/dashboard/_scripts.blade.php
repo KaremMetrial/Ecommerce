@@ -15,5 +15,5 @@
 <script src="{{ asset('assets/dashboard') }}/app-assets/js/scripts/customizer.js" type="text/javascript"></script>
 <!-- END MODERN JS-->
 <!-- BEGIN PAGE LEVEL JS-->
-<script src="{{ asset('assets/dashboard') }}/app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
+{{--<script src="{{ asset('assets/dashboard') }}/app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>--}}
 <!-- END PAGE LEVEL JS-->

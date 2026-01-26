@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css-rtl/core/colors/palette-gradient.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/assets/css/style-rtl.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/css/style-rtl.css">
     <!-- END Custom CSS-->
 @else
     <!-- BEGIN VENDOR CSS-->
@@ -41,7 +41,7 @@
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css/custom.css">
+{{--    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css/custom.css">--}}
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
@@ -49,6 +49,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css/core/colors/palette-gradient.css">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/css/style.css">
     <!-- END Custom CSS-->
 @endif

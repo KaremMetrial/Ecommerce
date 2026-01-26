@@ -13,5 +13,19 @@
     "Completed": "Completed",
     "Delivered": "Delivered",
     "Cancelled": "Cancelled",
-    "Failed": "Failed"
+    "Failed": "Failed",
+    "Easily Using": "Easily Using",
+    "Dashboard": "Dashboard",
+    "Your Email": "Your Email",
+    "Your Password": "Your Password",
+    "Login": "Login",
+    "Recover password": "Recover password",
+    "Remember Me": "Remember Me",
+    "Forgot Password?": "Forgot Password?",
+    "Reset Password": "Reset Password",
+    "The email field is required.": "The email field is required.",
+    "The email must be a valid email address.": "The email must be a valid email address.",
+    "No account found with this email.": "No account found with this email.",
+    "The password field is required.": "The password field is required.",
+    "Invalid credentials.": "Invalid credentials."
 }

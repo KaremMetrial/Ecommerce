@@ -2,13 +2,15 @@
 
 namespace App\Models\Admin;
 
+use Database\Factories\AdminFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 
 class Admin extends Authenticatable
 {
-    use HasRoles, SoftDeletes;
+    use HasFactory, HasRoles, SoftDeletes;
 
     protected $hidden = [
         'password',
@@ -20,5 +22,9 @@ class Admin extends Authenticatable
         return [
             'password' => 'hashed',
         ];
+    }
+    protected static function newFactory()
+    {
+        return AdminFactory::new();
     }
 }

@@ -23,8 +23,7 @@ class LoginController extends Controller
     public function authenticate(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
-
-        if (!Auth::guard('admin')->attempt($credentials)) {
+        if (!Auth::guard('admin')->attempt($credentials, $request->filled('remember_token'))) {
             return back()->withErrors(['email' => __('Invalid credentials.')]);
         }
 

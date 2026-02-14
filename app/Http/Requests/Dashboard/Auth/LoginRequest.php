@@ -24,8 +24,9 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string', 'email', 'max:255', 'exists:admins,email'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string'],
+            'remember_token' => ['boolean'],
         ];
     }
 
@@ -36,6 +37,7 @@ class LoginRequest extends FormRequest
             'email.email' => __('The email must be a valid email address.'),
             'email.exists' => __('No account found with this email.'),
             'password.required' => __('The password field is required.'),
+            'remember.boolean' => __('The remember field must be a boolean.'),
         ];
     }
 }

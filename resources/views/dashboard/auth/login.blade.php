@@ -45,7 +45,7 @@
                                             <div class="form-group row">
                                                 <div class="col-md-6 col-12 text-center text-md-left">
                                                     <fieldset>
-                                                        <input type="checkbox" id="remember-me" class="chk-remember">
+                                                        <input type="checkbox" id="remember-me" class="chk-remember" name="remember_token" value="1">
                                                         <label for="remember-me">{{__('Remember Me')}}</label>
                                                     </fieldset>
                                                 </div>

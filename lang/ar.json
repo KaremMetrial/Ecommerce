@@ -28,5 +28,6 @@
     "No account found with this email.": "لم يتم العثور على حساب بهذا البريد الإلكتروني.",
     "The password field is required.": "حقل كلمة المرور مطلوب.",
     "Invalid credentials.": "بيانات الدخول غير صحيحة.",
-    "The remember field must be a boolean.": "حقل التذكر يجب أن يكون منطقيًا."
+    "The remember field must be a boolean.": "حقل التذكر يجب أن يكون منطقيًا.",
+    "Logout": "تسجيل الخروج"
 }

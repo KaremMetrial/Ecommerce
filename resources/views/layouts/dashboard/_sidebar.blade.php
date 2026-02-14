@@ -227,7 +227,11 @@
                             <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
                             <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="ft-power"></i> Logout</a>
+                            <a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ft-power"></i> {{__('Logout')}}</a>
+
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                     {{--                    selected language--}}

@@ -11,7 +11,7 @@ Route::group(
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
     ], function () {
 // ================== Auth Routes ==================
-    Route::prefix('login')->middleware('guest')->controller(LoginController::class)->group(function () {
+    Route::prefix('login')->middleware(['guest:admin'])->controller(LoginController::class)->group(function () {
         Route::get('/', 'login')->name('login');
         Route::post('/', 'authenticate')->name('authenticate');
     });
@@ -19,6 +19,9 @@ Route::group(
     Route::middleware('auth:admin')->group(function () {
 // ================= Dashboard Home =================
         Route::get('/', HomeController::class)->name('dashboard');
+
+// ================= Logout =================
+        Route::post('logout', [LoginController::class, 'logout'])->name('logout');
     });
 
 });

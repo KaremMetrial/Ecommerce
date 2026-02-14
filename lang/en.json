@@ -28,5 +28,6 @@
     "No account found with this email.": "No account found with this email.",
     "The password field is required.": "The password field is required.",
     "Invalid credentials.": "Invalid credentials.",
-    "The remember field must be a boolean.": "The remember field must be a boolean."
+    "The remember field must be a boolean.": "The remember field must be a boolean.",
+    "Logout": "Logout"
 }

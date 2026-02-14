@@ -17,6 +17,8 @@ class AdminSeeder extends Seeder
         foreach ($admins as $admin) {
             $admin->assignRole('admin');
         }
+        $superAdmin = Admin::create(['name' => 'Super Admin', 'email' => 'karem@admin.com', 'password' => bcrypt('123456789')]);
+        $superAdmin->assignRole('super_admin');
         $this->command->info('Admin seed completed.');
     }
 }

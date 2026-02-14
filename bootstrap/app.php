@@ -32,11 +32,10 @@ return Application::configure(basePath: dirname(__DIR__))
             return $redirect;
         });
         $middleware->redirectUsersTo(function () {
-            $redirect = match (request()->path()) {
-                app()->getLocale() . '/admin/login' => route('admin.dashboard'),
-                default => null,
-            };
-            return $redirect;
+            if (auth()->guard('admin')->check()) {
+                return route('admin.dashboard');
+            }
+            return null;
         });
     })
     ->withExceptions(function (Exceptions $exceptions): void {

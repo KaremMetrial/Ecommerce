@@ -42,6 +42,12 @@
                                                     </i>
                                                 </div>
                                             </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <div class="d-flex align-items-center">
+                                                    {!! NoCaptcha::display() !!}
+                                                </div>
+                                                @error('g-recaptcha-response') <small class="text-danger">{{ $message }}</small> @enderror
+                                            </fieldset>
                                             <div class="form-group row">
                                                 <div class="col-md-6 col-12 text-center text-md-left">
                                                     <fieldset>

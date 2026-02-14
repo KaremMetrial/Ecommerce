@@ -27,6 +27,7 @@ class LoginRequest extends FormRequest
             'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string'],
             'remember_token' => ['boolean'],
+            'g-recaptcha-response' => ['required', 'captcha'],
         ];
     }
 
@@ -38,6 +39,8 @@ class LoginRequest extends FormRequest
             'email.exists' => __('No account found with this email.'),
             'password.required' => __('The password field is required.'),
             'remember.boolean' => __('The remember field must be a boolean.'),
+            'g-recaptcha-response.required' => __('The captcha field is required.'),
+            'g-recaptcha-response.captcha' => __('Invalid captcha.'),
         ];
     }
 }

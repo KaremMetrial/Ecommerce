@@ -29,5 +29,8 @@
     "The password field is required.": "The password field is required.",
     "Invalid credentials.": "Invalid credentials.",
     "The remember field must be a boolean.": "The remember field must be a boolean.",
-    "Logout": "Logout"
+    "Logout": "Logout",
+    "The captcha field is required.": "The captcha field is required.",
+    "Invalid captcha.": "Invalid captcha."
+
 }

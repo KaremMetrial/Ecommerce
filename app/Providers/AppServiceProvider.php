@@ -12,7 +12,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        foreach (config('repositories.bindings') as $interface => $repository) {
+            $this->app->bind($interface, $repository);
+        }
+
+        foreach (config('repositories.singletons') as $interface => $repository) {
+            $this->app->singleton($interface, $repository);
+        }
     }
 
     /**

@@ -31,6 +31,9 @@
     "The remember field must be a boolean.": "The remember field must be a boolean.",
     "Logout": "Logout",
     "The captcha field is required.": "The captcha field is required.",
-    "Invalid captcha.": "Invalid captcha."
-
+    "Invalid captcha.": "Invalid captcha.",
+    "OTP sent successfully.": "OTP sent successfully.",
+    "Invalid OTP.": "Invalid OTP.",
+    "OTP verified successfully. You can now reset your password.": "OTP verified successfully. You can now reset your password.",
+    "Password reset successful.": "Password reset successful."
 }

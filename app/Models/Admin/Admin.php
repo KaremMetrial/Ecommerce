@@ -6,11 +6,12 @@ use Database\Factories\AdminFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
 class Admin extends Authenticatable
 {
-    use HasFactory, HasRoles, SoftDeletes;
+    use HasFactory, HasRoles, SoftDeletes, Notifiable;
 
     protected $hidden = [
         'password',

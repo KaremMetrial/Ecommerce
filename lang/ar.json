@@ -31,5 +31,9 @@
     "The remember field must be a boolean.": "حقل التذكر يجب أن يكون منطقيًا.",
     "Logout": "تسجيل الخروج",
     "The captcha field is required.": "حقل الكابتشا مطلوب.",
-    "Invalid captcha.": "كابتشا غير صالحة."
+    "Invalid captcha.": "كابتشا غير صالحة.",
+    "OTP sent successfully.": "تم إرسال OTP بنجاح.",
+    "Invalid OTP.": "OTP غير صالح.",
+    "OTP verified successfully. You can now reset your password.": "تم التحقق من OTP بنجاح. يمكنك الآن إعادة تعيين كلمة المرور الخاصة بك.",
+    "Password reset successful.": "تم إعادة تعيين كلمة المرور بنجاح."
 }

@@ -9,6 +9,7 @@
         "php": "^8.2",
         "anhskohbo/no-captcha": "^3.7",
         "astrotomic/laravel-translatable": "^11.16",
+        "ichtrojan/laravel-otp": "^2.0",
         "laravel/framework": "^12.0",
         "laravel/mcp": "^0.5.2",
         "laravel/octane": "^2.13",

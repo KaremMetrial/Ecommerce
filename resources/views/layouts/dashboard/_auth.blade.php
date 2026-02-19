@@ -17,6 +17,7 @@
           rel="stylesheet">
     <!-- BEGIN VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css-rtl/vendors.css">
+{{--    <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/vendors/css/extensions/sweetalert.css">--}}
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/dashboard') }}/app-assets/css-rtl/app.css">
@@ -90,6 +91,7 @@
 </footer>
 <!-- BEGIN VENDOR JS-->
 <script src="{{ asset('assets/dashboard') }}/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+{{--<script src="{{ asset('assets/dashboard') }}/app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>--}}
 <!-- BEGIN VENDOR JS-->
 <!-- BEGIN PAGE VENDOR JS-->
 <script src="{{ asset('assets/dashboard') }}/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"

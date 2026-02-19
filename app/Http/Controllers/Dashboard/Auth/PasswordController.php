@@ -29,7 +29,8 @@ class PasswordController extends Controller
         $admin->notify(new SendOtp($otp->token, 10));
 
         request()->session()->put('email', $admin->email);
-        return redirect()->route('admin.password.confirm.index')->with('success', __('OTP sent successfully.'));
+        toastr()->positionClass('toast-bottom-right')->success(__('OTP sent successfully.'));
+        return redirect()->route('admin.password.confirm.index');
     }
     public function confirmPasswordReset()
     {
@@ -39,11 +40,11 @@ class PasswordController extends Controller
     {
         $validated = $this->otpRepository->validate(request()->session()->get('email'), request()->input('otp'));
         if (!$validated) {
-            return redirect()->back()->withErrors([
-                'otp' => __('Invalid OTP.')
-            ]);
+            toastr()->positionClass('toast-bottom-right')->error(__('Invalid OTP.'));
+            return redirect()->back();
         }
-        return redirect()->route('admin.password.reset.index')->with('success', __('OTP verified successfully. You can now reset your password.'));
+        toastr()->positionClass('toast-bottom-right')->success(__('OTP verified successfully. You can now reset your password.'));
+        return redirect()->route('admin.password.reset.index');
     }
     public function resetPasswordForm()
     {
@@ -53,7 +54,9 @@ class PasswordController extends Controller
     {
         $admin = $this->adminRepository->updateByEmail(request()->session()->get('email'), ['password' => Hash::make(request()->input('password'))]);
         request()->session()->forget('email');
-        return redirect()->route('admin.login')->with('success', __('Password reset successful.'));
+
+        toastr()->positionClass('toast-bottom-right')->success(__('Password reset successful.'));
+        return redirect()->route('admin.login');
     }
 
 }

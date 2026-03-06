@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Dashboard\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\Auth\LoginRequest;
+use App\Services\AuthService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function __construct(){}
+
+
     /**
      * Display the login view.
      */
@@ -23,17 +27,16 @@ class LoginController extends Controller
     public function authenticate(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
-        if (!Auth::guard('admin')->attempt($credentials, $request->filled('remember_token'))) {
+        if (!AuthService::authenticate($credentials, $request->filled('remember_token'), 'admin')) {
             return back()->withErrors(['email' => __('Invalid credentials.')]);
         }
 
         return redirect()->intended(route('admin.dashboard'));
     }
+
     public function logout(Request $request)
     {
-        Auth::guard('admin')->logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+        AuthService::logout('admin');
         return redirect(route('admin.login'));
     }
 }
